@@ -1,0 +1,103 @@
+﻿/*通用类*/
+*{
+	margin:0;
+	padding:0;	
+}
+html {
+    /*overflow:scroll;
+    overflow-x:hidden;*/
+    /*overflow:auto !important; overflow:hidden;
+   overflow-x: hidden; overflow-y: auto;*/ 
+}
+body{		
+	/*min-width:1100px;*/
+	margin:0 auto;
+	font-size:12px;	
+	font-family:"Microsoft Yahei";
+	color:#666;
+	background:#fff;	
+}
+h1,h2,h3{	
+	font-weight:500;	
+}
+img{
+	border:none;	
+}
+a{
+	cursor:pointer;
+	text-decoration:none;	
+}
+a:hover{
+    color:#000;
+}
+ul{
+	list-style-type:none;	
+}
+em{
+	font-style:normal;	
+}
+.lt{
+	float:left;	
+}
+.rt{
+	float:right;	
+}
+input{
+	font-family:"Microsoft Yahei";
+	color:#666;	
+}
+input.sub,label{
+	border:none;	
+	cursor:pointer;
+}
+div.clear{
+	font: 0px Arial; line-height:0;
+	height:0; 
+	overflow:hidden;	
+	clear:both;	
+}
+
+/* 公用CSS 开始 */
+
+/* 登录页 开始 */
+.header {
+    width: 100%;
+    position:absolute;
+    background:#fff repeat;
+    top:0px;
+}
+.header .header_bg{
+	width:100%;
+    position:absolute;
+    z-index:2;
+}
+.header .header_bg img{
+	width:100%;
+}
+.header .logo{
+	width:47%;
+    float:left;
+    position:relative;
+    z-index:4;
+    margin-left:5%;
+    margin-top:2%;
+}
+.header .logo img{
+	width:100%;
+}
+.header .download{
+	width:35%;
+    float:right;
+    position:relative;
+    z-index:4;
+    margin-right:5%;
+    margin-top:1.5%;
+}
+.header .download img{
+	width:100%;
+}
+
+
+/* 登录页 结束 */
+
+/* 公用CSS 结束 */

@@ -1,0 +1,74 @@
+[15-Oct-2014 02:28:42 US/Pacific] PHP Fatal error:  Call to undefined function p() in /Users/md212/www/msup/protected/views/layouts/main.php on line 41
+[15-Oct-2014 02:28:47 US/Pacific] PHP Fatal error:  Call to undefined function p() in /Users/md212/www/msup/protected/views/layouts/main.php on line 41
+[15-Oct-2014 02:29:58 US/Pacific] PHP Parse error:  parse error in /Users/md212/www/msup/protected/views/layouts/main.php on line 565
+[15-Oct-2014 02:40:23 US/Pacific] PHP Fatal error:  Cannot redeclare class PublisherSmallCalendarEventTab in /Users/md212/www/msup/protected/components/views/smallCalendar.php on line 718
+[15-Oct-2014 02:40:35 US/Pacific] PHP Fatal error:  Cannot redeclare class PublisherSmallCalendarEventTab in /Users/md212/www/msup/protected/components/views/smallCalendar.php on line 718
+[15-Oct-2014 02:41:01 US/Pacific] PHP Fatal error:  Cannot redeclare class PublisherSmallCalendarEventTab in /Users/md212/www/msup/protected/components/views/smallCalendar.php on line 718
+[15-Oct-2014 02:41:38 US/Pacific] PHP Fatal error:  Cannot redeclare class PublisherSmallCalendarEventTab in /Users/md212/www/msup/protected/components/views/smallCalendar.php on line 718
+[15-Oct-2014 02:41:43 US/Pacific] PHP Fatal error:  Cannot redeclare class PublisherSmallCalendarEventTab in /Users/md212/www/msup/protected/components/views/smallCalendar.php on line 718
+[15-Oct-2014 02:43:21 US/Pacific] PHP Fatal error:  Cannot redeclare class PublisherSmallCalendarEventTab in /Users/md212/www/msup/protected/components/views/smallCalendar.php on line 718
+[20-Oct-2014 09:50:42 Asia/Shanghai] PHP Parse error:  parse error, expecting `"identifier (T_STRING)"' in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 876
+[20-Oct-2014 09:58:34 Asia/Shanghai] PHP Notice:  Use of undefined constant ROOT_PATH - assumed 'ROOT_PATH' in /Users/md212/www/msup/index.php on line 40
+[20-Oct-2014 09:58:34 Asia/Shanghai] PHP Parse error:  parse error in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 881
+[20-Oct-2014 09:58:53 Asia/Shanghai] PHP Notice:  Use of undefined constant ROOT_PATH - assumed 'ROOT_PATH' in /Users/md212/www/msup/index.php on line 40
+[20-Oct-2014 09:58:53 Asia/Shanghai] PHP Parse error:  parse error in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 881
+[20-Oct-2014 09:59:13 Asia/Shanghai] PHP Notice:  Use of undefined constant ROOTPATH - assumed 'ROOTPATH' in /Users/md212/www/msup/index.php on line 40
+[20-Oct-2014 09:59:13 Asia/Shanghai] PHP Parse error:  parse error in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 881
+[20-Oct-2014 09:59:31 Asia/Shanghai] PHP Parse error:  parse error in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 881
+[20-Oct-2014 09:59:54 Asia/Shanghai] PHP Parse error:  parse error in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 881
+[20-Oct-2014 10:00:07 Asia/Shanghai] PHP Parse error:  parse error in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 881
+[20-Oct-2014 10:00:26 Asia/Shanghai] PHP Notice:  Use of undefined constant __ROOT__ - assumed '__ROOT__' in /Users/md212/www/msup/constants.php on line 41
+[20-Oct-2014 10:00:26 Asia/Shanghai] PHP Parse error:  parse error in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 881
+[20-Oct-2014 10:00:33 Asia/Shanghai] PHP Notice:  Use of undefined constant ROOT - assumed 'ROOT' in /Users/md212/www/msup/constants.php on line 41
+[20-Oct-2014 10:00:33 Asia/Shanghai] PHP Parse error:  parse error in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 881
+[20-Oct-2014 10:00:47 Asia/Shanghai] PHP Notice:  Use of undefined constant ROOT_PATH - assumed 'ROOT_PATH' in /Users/md212/www/msup/constants.php on line 41
+[20-Oct-2014 10:00:47 Asia/Shanghai] PHP Parse error:  parse error in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 881
+[20-Oct-2014 10:01:00 Asia/Shanghai] PHP Parse error:  parse error in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 881
+[20-Oct-2014 10:01:08 Asia/Shanghai] PHP Parse error:  parse error in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 881
+[20-Oct-2014 10:01:14 Asia/Shanghai] PHP Notice:  Use of undefined constant ROOT - assumed 'ROOT' in /Users/md212/www/msup/index.php on line 44
+[20-Oct-2014 10:01:14 Asia/Shanghai] PHP Parse error:  parse error in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 881
+[20-Oct-2014 10:01:21 Asia/Shanghai] PHP Parse error:  parse error in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 881
+[20-Oct-2014 10:01:43 Asia/Shanghai] PHP Parse error:  parse error in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 881
+[20-Oct-2014 10:28:35 Asia/Shanghai] PHP Warning:  mkdir(): No such file or directory in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 886
+[20-Oct-2014 10:28:35 Asia/Shanghai] PHP Warning:  mkdir(): No such file or directory in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 886
+[20-Oct-2014 10:28:35 Asia/Shanghai] PHP Warning:  mkdir(): No such file or directory in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 886
+[20-Oct-2014 10:28:35 Asia/Shanghai] PHP Fatal error:  Call to a member function getLayout() on a non-object in /Users/md212/www/msup/protected/views/layouts/column3.php on line 49
+[20-Oct-2014 10:29:23 Asia/Shanghai] PHP Warning:  mkdir(): No such file or directory in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 887
+[20-Oct-2014 10:29:23 Asia/Shanghai] PHP Warning:  mkdir(): No such file or directory in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 887
+[20-Oct-2014 10:29:23 Asia/Shanghai] PHP Warning:  mkdir(): No such file or directory in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 887
+[20-Oct-2014 10:29:23 Asia/Shanghai] PHP Fatal error:  Call to a member function getLayout() on a non-object in /Users/md212/www/msup/protected/views/layouts/column3.php on line 49
+[20-Oct-2014 10:32:48 Asia/Shanghai] PHP Notice:  Undefined variable: dir不存在，请添加 in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 886
+[20-Oct-2014 10:32:57 Asia/Shanghai] PHP Notice:  Undefined variable: dir不存在，请添加 in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 886
+[20-Oct-2014 10:33:11 Asia/Shanghai] PHP Notice:  Undefined variable: dir不存在，请添加 in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 887
+[20-Oct-2014 10:33:43 Asia/Shanghai] PHP Notice:  Use of undefined constant __ROOT__ - assumed '__ROOT__' in /Users/md212/www/msup/protected/config/main.php on line 322
+[20-Oct-2014 10:33:43 Asia/Shanghai] PHP Notice:  Undefined variable: dir不存在，请添加 in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 887
+[20-Oct-2014 10:33:50 Asia/Shanghai] PHP Warning:  mkdir(): Permission denied in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 893
+[20-Oct-2014 10:33:50 Asia/Shanghai] PHP Warning:  mkdir(): Permission denied in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 893
+[20-Oct-2014 10:33:50 Asia/Shanghai] PHP Warning:  mkdir(): Permission denied in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 893
+[20-Oct-2014 10:33:50 Asia/Shanghai] PHP Fatal error:  Call to a member function getLayout() on a non-object in /Users/md212/www/msup/protected/views/layouts/column3.php on line 49
+[20-Oct-2014 10:34:19 Asia/Shanghai] PHP Warning:  mkdir(): Permission denied in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 893
+[20-Oct-2014 10:34:19 Asia/Shanghai] PHP Warning:  mkdir(): Permission denied in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 893
+[20-Oct-2014 10:34:19 Asia/Shanghai] PHP Warning:  mkdir(): Permission denied in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 893
+[20-Oct-2014 10:34:19 Asia/Shanghai] PHP Fatal error:  Call to a member function getLayout() on a non-object in /Users/md212/www/msup/protected/views/layouts/column3.php on line 49
+[20-Oct-2014 10:34:26 Asia/Shanghai] PHP Warning:  mkdir(): Permission denied in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 893
+[20-Oct-2014 10:34:26 Asia/Shanghai] PHP Warning:  mkdir(): Permission denied in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 893
+[20-Oct-2014 10:34:26 Asia/Shanghai] PHP Warning:  mkdir(): Permission denied in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 893
+[20-Oct-2014 10:34:26 Asia/Shanghai] PHP Fatal error:  Call to a member function getLayout() on a non-object in /Users/md212/www/msup/protected/views/layouts/column3.php on line 49
+[20-Oct-2014 10:34:51 Asia/Shanghai] PHP Warning:  mkdir(): Permission denied in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 893
+[20-Oct-2014 10:34:51 Asia/Shanghai] PHP Warning:  mkdir(): Permission denied in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 893
+[20-Oct-2014 10:34:51 Asia/Shanghai] PHP Warning:  mkdir(): Permission denied in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 893
+[20-Oct-2014 10:34:51 Asia/Shanghai] PHP Fatal error:  Call to a member function getLayout() on a non-object in /Users/md212/www/msup/protected/views/layouts/column3.php on line 49
+[20-Oct-2014 10:34:56 Asia/Shanghai] PHP Warning:  mkdir(): Permission denied in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 893
+[20-Oct-2014 10:34:56 Asia/Shanghai] PHP Warning:  mkdir(): Permission denied in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 893
+[20-Oct-2014 10:34:56 Asia/Shanghai] PHP Warning:  mkdir(): Permission denied in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 893
+[20-Oct-2014 10:34:56 Asia/Shanghai] PHP Fatal error:  Call to a member function getLayout() on a non-object in /Users/md212/www/msup/protected/views/layouts/column3.php on line 49
+[20-Oct-2014 10:35:04 Asia/Shanghai] PHP Warning:  mkdir(): Permission denied in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 893
+[20-Oct-2014 10:35:04 Asia/Shanghai] PHP Warning:  mkdir(): Permission denied in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 893
+[20-Oct-2014 10:35:04 Asia/Shanghai] PHP Warning:  mkdir(): Permission denied in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 893
+[20-Oct-2014 10:35:04 Asia/Shanghai] PHP Fatal error:  Call to a member function getLayout() on a non-object in /Users/md212/www/msup/protected/views/layouts/column3.php on line 49
+[20-Oct-2014 10:36:14 Asia/Shanghai] PHP Warning:  mkdir(): Permission denied in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 894
+[20-Oct-2014 10:36:14 Asia/Shanghai] PHP Warning:  mkdir(): Permission denied in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 894
+[20-Oct-2014 10:36:14 Asia/Shanghai] PHP Warning:  mkdir(): Permission denied in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 894
+[20-Oct-2014 10:36:14 Asia/Shanghai] PHP Fatal error:  Call to a member function getLayout() on a non-object in /Users/md212/www/msup/protected/views/layouts/column3.php on line 49
+[20-Oct-2014 13:30:36 Asia/Shanghai] PHP Fatal error:  Cannot use object of type CDbCommand as array in /Users/md212/www/msup/framework/db/schema/CDbCommandBuilder.php on line 889
+[24-Oct-2014 13:39:15 Asia/Shanghai] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php/extensions/no-debug-non-zts-20100525/php_intl.dll' - dlopen(/usr/lib/php/extensions/no-debug-non-zts-20100525/php_intl.dll, 9): image not found in Unknown on line 0

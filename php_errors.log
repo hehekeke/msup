@@ -1,0 +1,18 @@
+[11-Jun-2015 13:54:21 Asia/Chongqing] PHP Fatal error:  Cannot use yii\web\Controller as Controller because the name is already in use in /Users/apple/upload/www/msup/frontend/controllers/FeedbackController.php on line 15
+[12-Jun-2015 11:21:20 Asia/Chongqing] PHP Fatal error:  Class 'frontend\models\MsupUserFeedback' not found in /Users/apple/upload/www/msup/frontend/controllers/FeedbackController.php on line 24
+[12-Jun-2015 11:34:52 Asia/Chongqing] PHP Fatal error:  Call to undefined method Yii::app() in /Users/apple/upload/www/msup/frontend/views/feedback/index.php on line 89
+[12-Jun-2015 11:36:20 Asia/Chongqing] PHP Warning:  array_values() expects parameter 1 to be array, null given in /Users/apple/upload/www/msup/vendor/yiisoft/yii2/web/ErrorHandler.php on line 348
+[12-Jun-2015 11:36:20 Asia/Chongqing] PHP Warning:  Invalid argument supplied for foreach() in /Users/apple/upload/www/msup/vendor/yiisoft/yii2/web/ErrorHandler.php on line 350
+[12-Jun-2015 11:36:20 Asia/Chongqing] PHP Warning:  implode(): Invalid arguments passed in /Users/apple/upload/www/msup/vendor/yiisoft/yii2/web/ErrorHandler.php on line 389
+[12-Jun-2015 11:38:44 Asia/Chongqing] PHP Fatal error:  Call to undefined method Yii::app() in /Users/apple/upload/www/msup/frontend/controllers/FeedbackController.php on line 37
+[12-Jun-2015 11:39:11 Asia/Chongqing] PHP Warning:  array_values() expects parameter 1 to be array, null given in /Users/apple/upload/www/msup/vendor/yiisoft/yii2/web/ErrorHandler.php on line 348
+[12-Jun-2015 11:39:11 Asia/Chongqing] PHP Warning:  Invalid argument supplied for foreach() in /Users/apple/upload/www/msup/vendor/yiisoft/yii2/web/ErrorHandler.php on line 350
+[12-Jun-2015 11:39:11 Asia/Chongqing] PHP Warning:  implode(): Invalid arguments passed in /Users/apple/upload/www/msup/vendor/yiisoft/yii2/web/ErrorHandler.php on line 389
+[12-Jun-2015 11:43:03 Asia/Chongqing] PHP Fatal error:  Call to undefined method Yii::app() in /Users/apple/upload/www/msup/frontend/controllers/FeedbackController.php on line 26
+[12-Jun-2015 13:08:29 Asia/Chongqing] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /Users/apple/upload/www/msup/frontend/controllers/FeedbackController.php on line 32
+[12-Jun-2015 15:31:59 Asia/Chongqing] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF) in /Users/apple/upload/www/msup/frontend/views/feedback/index.php on line 25
+[12-Jun-2015 17:42:05 Asia/Chongqing] PHP Fatal error:  Cannot redeclare backend\controllers\SchedulingController::actionFeedback() in /Users/apple/upload/www/msup/backend/controllers/SchedulingController.php on line 175
+[12-Jun-2015 19:02:22 Asia/Chongqing] PHP Fatal error:  Call to a member function hasMany() on a non-object in /Users/apple/upload/www/msup/backend/controllers/SchedulingController.php on line 179
+[12-Jun-2015 19:09:42 Asia/Chongqing] PHP Fatal error:  Call to a member function hasMany() on a non-object in /Users/apple/upload/www/msup/backend/controllers/SchedulingController.php on line 179
+[12-Jun-2015 19:42:06 Asia/Chongqing] PHP Fatal error:  Call to undefined method Yii::app() in /Users/apple/upload/www/msup/backend/controllers/SchedulingController.php on line 179
+[12-Jun-2015 19:58:59 Asia/Chongqing] PHP Fatal error:  Call to undefined method Yii::app() in /Users/apple/upload/www/msup/backend/controllers/SchedulingController.php on line 179

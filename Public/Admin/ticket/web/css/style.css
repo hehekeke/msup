@@ -1,0 +1,321 @@
+﻿ 登录页开始 */
+.main {
+    width:100%;
+    margin-top:77px;
+}
+.main .container {
+    width:333px;
+	margin:0 auto;
+}
+.main .container .welcome {
+    margin-bottom:30px;
+}
+.main .container .welcome img {
+    display:block;
+	margin:0 auto;
+}
+input.bank{
+    text-indent: 1em;
+}
+.login_form {
+    width:331px;
+    height:auto;
+    margin-bottom:48px;
+}
+.login_form .login {
+    width:331px;
+    height:98px;
+    border:1px solid #dbdbdb;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+.login_form .login .in {
+    height: 30px;
+    clear: both;
+    position: relative;
+    font-size:15.96px;
+    border-bottom:1px dashed  #dbdbdb;
+    padding:10px 0;
+    overflow:hidden;
+    margin:0 20px;
+}
+.login_form .login .in1 {
+    height: 30px;
+    clear: both;
+    position: relative;
+    font-size:15.96px;
+    padding:10px 0;
+    overflow:hidden;
+    margin:0 20px;
+}
+.login_form .login .tit {
+    float: left;
+    display: inline-block;
+    width: 80px;
+    height: 34px;
+    line-height: 34px;
+    color:#646464;
+    text-align: right;
+    padding-right: 15px;
+}
+.login_form .login .text {
+    width: 180px;
+    padding-left: 5px;
+    line-height:34px;
+    height: 34px;
+    color:#000;
+    float: left;
+}
+.login_form .login input {
+    outline:medium;
+    border:1px;
+}
+.login_form .submit .sub {
+    width: 330px;
+    height: 48px;
+    background:url("../images/user_sub.png");
+    border:none;
+}
+.forget_pwd a{
+    width:80px;
+    color:#1aa2e6;
+    font-size:15.96px;
+    border-bottom:1px solid #a9dcf6;
+    display:block;
+    margin:0 auto;
+}
+/* 登录页结束 */
+
+/* 会员签到页开始 */
+#sign {
+    background-color:#f7f7f7;
+}
+.sign_main {
+    width:100%;
+    margin-top:27px;
+    
+}
+.sign_main .container {
+    width:1005px;
+	margin:0 auto;
+}
+.sign_main .container .user {
+    height:567px;
+    margin-bottom:20px;
+}
+.user .user_sign {
+    width:532px;
+    height:562px;
+    border:1px solid #d3d3d3;
+    border-radius:10px;
+    background-color:#fff;
+    /*margin-right:55px;*/
+    float:left;
+}
+.user .user_sign .tips {
+    margin:70px auto 50px;
+}
+.user .user_sign .tips img {
+    display:block;
+    margin:0 auto;
+}
+.user .user_sign .sign .in {
+    height: 73px;
+    clear: both;
+    position: relative;
+    font-size:26px;
+    overflow:hidden;
+    margin-left:35px;
+    margin-bottom:62px;
+}
+.user .user_sign .sign .tit {
+    float: left;
+    display: inline-block;
+    width: 78px;
+    height: 70px;
+    line-height: 70px;
+    color:#464646;
+    text-align: right;
+    padding-right: 15px;
+}
+.user .user_sign .sign .text {
+    width: 370px;
+    padding-left: 5px;
+    line-height:73px;
+    height: 71px;
+    color:#878787;
+    float: left;
+    font-size:26px;
+    background-color:#dcdcdc;
+    border-radius:10px;
+    border:medium;
+}
+.user .user_sign .sign .submit{
+    width: 168px;
+    margin:0 auto;
+}
+
+.user .user_info {
+    width:411px;
+    height:462px;
+    background:url("../images/user_info_bg.png") no-repeat;
+    background-size:411px;
+    float:right;
+    padding-top:115px;
+}
+.user .user_info .in {
+    height: 56px;
+    line-height:56px;
+    clear: both;
+    position: relative;
+    font-size:15.96px;
+    overflow:hidden;
+    margin:0 20px;
+    border-bottom:1px dashed #d2d2d2;
+}
+.user .user_info .border_none {
+    border-bottom:none;
+    margin-bottom:15px;
+}
+.user .user_info .tit {
+    float: left;
+    display: inline-block;
+    width: 105px;
+    height: 56px;
+    line-height:56px;
+    font-size:18px;
+    color:#878787;
+    text-align: right;
+    padding-right: 15px;
+}
+.user .user_info .text {
+    width: 200px;
+    padding-left: 5px;
+    height: 56px;
+    line-height:56px;
+    font-size:18px;
+    color:#000;
+    float: left;
+}
+.user .user_info input {
+    outline:medium;
+    border:none;
+}
+.user .user_info .submit{
+    width: 168px;
+    margin:0 auto;
+}
+/*.user .user_info .submit .sub {
+    
+    color:#fff;font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    /*background:url("../images/sign_bg.png") no-repeat;*/
+    /*border:none;*/
+/*}*/
+.sub{
+    width: 168px;
+    height: 54px;
+    cursor: pointer;
+    background: #ffaf04;
+    color:#fff;
+    font-size: 20px;
+    border-radius: 10px; 
+    border: 0;
+}
+.sub.isActivationed{
+    background: #7a7a7a;
+    color:#aaa8a3;
+}
+.sign_main .container .sign_history {
+    width:1003px;
+    height:781px;
+    border:1px solid #d3d3d3;
+    border-radius:10px;
+    background-color:#fff;
+    margin-bottom:62px;
+}
+.sign_history .top {
+    width:100%;
+    height:60px;
+    border-bottom:1px solid #d3d3d3;
+    background:url(../images/sign_history_bg.png) no-repeat;
+}
+.sign_history .contain {
+    width:100%;
+    height:637px;
+}
+.sign_history .contain .in {
+    width:973px;
+    height:62px;
+    margin:0 auto;
+    border-bottom:1px dashed #d2d2d2; 
+}
+.sign_history .contain .in .ticket_no {
+    width:290px;
+    height:62px;
+    float:left;
+    margin-left:10px;
+}
+.sign_history .contain .in .name {
+    width:230px;
+    height:62px;
+    float:left;
+}
+.sign_history .contain .in .mobile_no {
+    width:320px;
+    height:62px;
+    float:left;
+}
+.sign_history .contain .in .sign_state {
+    width:100px;
+    height: 62px;
+    line-height:62px;
+    float:left;
+    color:#1aa2e6;
+    font-size:18px;
+}
+.sign_history .contain .in .tit {
+    float:left;
+    display: inline-block;
+    width: 80px;
+    height: 62px;
+    line-height:62px;
+    text-align: right;
+    padding-right:10px;
+    font-size:18px;
+    color:#646464;
+}
+.sign_history .contain .in .tel {
+    width: 140px;
+    line-height:62px;
+    height: 62px;
+    font-size:18px;
+    color:#000;
+    float:left;
+}
+.page {
+  height: 31px;
+  margin-top:20px;
+  text-align: center;
+  line-height: 31px;
+}
+.page em {
+  margin-right: 10px;
+}
+.page a{
+  display: inline-block;
+  height: 29px;
+  line-height: 29px;
+  border: 1px solid #f4f7fa;
+  padding: 0 11px;
+  background-color: #fff;
+  color: #515151;
+  border-radius:3px;
+}
+.page .on {
+  background:#0f6ab4;
+  color:#fff;
+}
+.sub.full-and-activation{position: relative;top:-50px;left:105px;}
+/* 会员签到页结束 
