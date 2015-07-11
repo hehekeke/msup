@@ -54,7 +54,6 @@ class MsupBase extends \yii\db\ActiveRecord
     	if ( $this->hasAttribute('update_admin')  && !$this->update_admin) {
     		$this->update_admin = Yii::$app->user->identity->id;
     	}
-
     	return true;
 
     } 

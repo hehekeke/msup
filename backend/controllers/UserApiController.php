@@ -8,6 +8,7 @@ use backend\models\MsupLecturer;
 use backend\models\MsupScheduling;
 use backend\models\MsupMemberInfo;
 use backend\models\MsupUserMember;
+use backend\models\MsupProducer;
 use backend\models\MsupSites;
 use backend\models\MsupCaseSubmit;
 use backend\components\ApiAccest;
@@ -222,22 +223,115 @@ class UserApiController extends Controller
 			$this->api->errorHandler->sendRegisterErrors($info);
 		}
 	}
+
+	/**
+	 * 用户案例进行更新操作
+	 * @return [type] [description]
+	 */
+	public function actionTestCaseSubmitUpdate($value=''){
+		$request = [
+						'anlitijiao' => [
+						     'mcs_id'=>'3',
+		                    'mcs_courseTitle' => '大数据的研222',
+		                    'mcs_lecturerName' => '王宇奇',
+		                    'mcs_lecturerDescription' => 'phper',
+		                    'mcs_lecturerThumbs' => '照片111',
+		                    'mcs_courseTag' => '1',
+		                    'mcs_companyThumbs' => '照片22',
+		                    'mcs_courseDescription' => '不错',
+		                    'mcs_lecturerPosition' => '不错',
+		                    'mcs_companyDescription' => '9',
+		                    'mcs_companyName' => '天津市公司',
+		                    'mcs_courseThumbs' => '照片33',
+		                    'mcs_companySize' => '22',
+		                    'mcs_ccompanyPosition' => '飞机',
+		                    'mcs_courseContent' => '你好',
+		                    'mcs_userid'=>'1',
+						]
+						
+				   ];
+		$this->actionCaseSubmitUpdate(json_encode($request));
+	}
+	public function actionCaseSubmitUpdate($request = null){
+	   	
+		$model = new MsupCaseSubmit;
+        $request = $this->api->request->unformatInputRequest($this->checkRequest($request));
+       
+		$model->id = $request['caseSubmit']['id'];
+     	$model->caseSubmitUpdateById($request['caseSubmit']);
+        
+	}
 	
 	/**
 	 * 获得用户的案例列表
 	 * @param  [type] $request [description]
 	 * @return [type]          [description]
 	 */
+	public function actionTestGetCaseSubmitList($value='')
+	{
+		$request = [
+		                    'mcs_userid'=>'61',	
+				   ];
+				   $this->actionGetCaseSubmitList(json_encode($request));
+	}
 
 	public function actionGetCaseSubmitList($request = null)
 	{
-		$model = new MsupCaseSubmit;
-        $request = $this->api->request->unformatInputRequest($this->checkRequest($request));
-        
-        $row = $model->find()->where(['user_id' => $request['caseSubmit']])->asArray()->all();
-		// $this->saveCache($this->checkRequest($request), $row);
+       $request = $this->api->request->unformatInputRequest($this->checkRequest($request));
 
+		$caseSubmitModel = new MsupCaseSubmit;
+		$infoModel = new MsupMemberInfo;
+		$caseSubmitTable = $caseSubmitModel::tableName();
+	  $sql = "SELECT cs.*,mi.name,mi.company,mi.position from ".$caseSubmitTable." cs ,".$infoModel::tableName().
+	                 " mi where cs.user_id = mi.userId and cs.user_id =".$request['caseSubmit']['user_id'].
+	                    " order by id desc";
+	     
+		$row = $caseSubmitModel->findBySql($sql)->asArray()->all();
 		$this->api->errorHandler->pushDataByJson($row);
+
+	}
+
+	/**
+	 * 获得出品人对应的需要评论的列表
+	 * @param  [type] $request [description]
+	 * @return [type]          [description]
+	 */
+	public function actionTestGetCaseSubmitReviewList($value='')
+	{
+		  //排课会场
+            // 'schedulingVenue' => [
+            //     'id' => 'msv_id',   
+            //     'sid' => 'msv_sid',
+            //     'venueName' => 'msv_venueName',
+            // ],
+		// 'paikehuichang' => 'schedulingVenue',
+		$request = [
+						'anlitijiao' => [
+						     
+		                    'mcs_userid'=>'58',
+						]
+						
+				   ];
+				   $this->actionGetCaseSubmitReviewList(json_encode($request));
+	}
+
+	public function actionGetCaseSubmitReviewList($request = null)
+	{
+       $request = $this->api->request->unformatInputRequest($this->checkRequest($request));
+		$caseSubmitModel = new MsupCaseSubmit;
+		$infoModel = new MsupMemberInfo;
+		$caseSubmitTable = $caseSubmitModel::tableName();
+	  $sql = "SELECT cs.*,mi.name,mi.company,mi.position from ".$caseSubmitTable." cs ,".$infoModel::tableName().
+	                 " mi where cs.user_id = mi.userId ".
+	                    " and courseTag in (select venue from msup_producer where user_id = "
+	                    	.$request['caseSubmit']['user_id']." ) order by id desc";
+	     
+		
+		$row = $caseSubmitModel->findBySql($sql)->asArray()->all();
+		$this->api->errorHandler->pushDataByJson($row);
+
+		
+
 
 	}
 	/**
@@ -248,7 +342,7 @@ class UserApiController extends Controller
 	public function actionTestAddCaseSubmitAdvice($value=''){
 		$request = [
 						'anlitijiao' => [
-		                    'mcs_caseAdvice'=>'这个案例写的太短了111',
+		                    'mcs_caseAdvice'=>'这个案例写的太短33333',
 		                    'mcs_id'=>'3'
 						]
 						
@@ -278,42 +372,25 @@ class UserApiController extends Controller
 public function actionTestGetCaseSubmitDetailById($value='')
 	{
 		$request = [
-            'mm' => 'anlitijiao',
-            
-          
-//             'mw' => 'msvc_date > 1430442000 AND msvc_date < 1435420799',
-            'ms' => '*',
-            'mr' => [
-                'huiyuan' => [
-                    'mm' => 'huiyuan',
-                    'ms' => '*'
-                ]
-            ],
-            
-//             // 关联查询
-//             'mo' => '0',
-// //             'mp'=>'msvc_date ASC',
-//             // 查询条数
-//             'ml' => '5',
-//             'mp' => 'msvc_date ASC,msvc_id asc',
-//             'mgp' => 'msvc_sid'
+               'mmi_userId'=>'61'		
         ];
-	    $this->actionGetCaseSubmitDetailById(json_encode($request));
+	    $this->actionGetCaseSubmitDetailById($request[mmi_userId]);
 				  
 	}
 
 	public function actionGetCaseSubmitDetailById($request = null)
 	{
-		// $model = new MsupCaseSubmit;
-  //       $request = $this->api->request->unformatInputRequest($this->checkRequest($request));
-       
-  //       $row = $model->find()->where(['id' => $request['caseSubmit']])->asArray()->all();
-		// // $this->saveCache($this->checkRequest($request), $row);
-		$post = $this->checkRequest($request);
-		$this->api->queryInit($post)->asArray()->all();
-		p($this->api->queryInit($post)->asArray()->all());
+		$request = $this->api->request->unformatInputRequest($this->checkRequest($request));
+		// p($request);
+		$caseSubmitModel = new MsupCaseSubmit;
+		$infoModel = new MsupMemberInfo;
+		$caseSubmitTable = $caseSubmitModel::tableName();
+	  $sql = "SELECT cs.*,mi.name,mi.company,mi.position from ".$caseSubmitTable." cs ,".$infoModel::tableName().
+	                 " mi where cs.user_id = mi.userId and cs.user_id =".$request['caseSubmit']['user_id'].
+	                    " and cs.id = ".$request['caseSubmit']['id']." order by id desc";
+	     
+		$row = $caseSubmitModel->findBySql($sql)->asArray()->all();
 		$this->api->errorHandler->pushDataByJson($row);
-
 	}
 
 	/**

@@ -101,4 +101,9 @@ class MsupCaseSubmit extends MsupBase
         $this->setCaseSubmitAdvice($caseAdvice);
        $this->updateAll(['caseAdvice' =>  $this->caseAdvice,'caseStatus'=>'1'],['id' => $this->id]);
     }
+    //根据id来更新casesubmit的相关数据
+    public function caseSubmitUpdateById($data)
+    {
+        $this->updateAll($data,['id' => $this->id]);
+    }
 }
