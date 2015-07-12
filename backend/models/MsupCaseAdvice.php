@@ -42,10 +42,8 @@ class MsupCaseAdvice extends MsupBase
     public function rules()
     {
         return [
-            [['case_id',  'user_id'], 'integer'],
+            [['case_id',  'user_id','advice_date'], 'integer'],
             [['content'], 'string', 'max' => 300],
-           
-            [['advice_date'], 'string', 'max' => 20],
         ];
     }
 

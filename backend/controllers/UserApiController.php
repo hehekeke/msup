@@ -341,36 +341,25 @@ class UserApiController extends Controller
 	 * @return [type]          [description]
 	 */
 	public function actionTestAddCaseSubmitAdvice($value=''){
-		$request = [
-						'shenpiyijian' => [
-		                    'myj_content'=>'这个案例写的太短',
-		                    'myj_case_id'=>'2',
-		                    'myj_user_id'=>'33',
-		                    'myj_advice_date'=>"111"
-						]
-						
-				   ];
+		 $request = [
+                        'shenpiyijian' => [
+                            'myj_content'=>"222222",
+                            'myj_case_id'=>'37',
+                            'myj_user_id'=>'61',
+                            'myj_advice_date'=>"215-07-10 12:00:00"
+                        ]
+                        
+                   ];
 		$this->actionAddCaseSubmitAdvice(json_encode($request));
 	}
 	public function actionAddCaseSubmitAdvice($request = null)
 	{
-         
+
+ 		
 		$model = new MsupCaseAdvice;
-		$request = $this->api->request->unformatInputRequest($this->checkRequest($request));
-		
-		$row = $model->create($request[yijian]);
-		
-		$caseSubmitModel = new MsupCaseSubmit;	
-		p($row);
-		$this->api->errorHandler->pushDataByJson($row);
+ 		$request = $this->api->request->unformatInputRequest($this->checkRequest($request));
 
-		// p($row);
-		// $model->id = $request['caseSubmit']['id'];
-  //    	$model->addCaseSubmitAdvice($request['caseSubmit']['caseAdvice']);
-		// $this->saveCache($this->checkRequest($request), $row);
-	
-		// $this->saveCache($this->checkRequest($request), $row);
-
+		$adds = $model->create($request[yijian]);
 		
 	}
 
