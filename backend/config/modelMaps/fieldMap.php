@@ -239,6 +239,13 @@ return [
                     'caseAdvice'=>'mcs_caseAdvice'
 
            ],
+           'yijian'=>[
+                    'id'=>'myj_id',
+                    'case_id'=>'myj_case_id',
+                    'user_id'=>'myj_user_id',
+                    'content'=>'myj_content',
+                    'advice_date'=>'myj_advice_date'
+           ]
 
         ]
 ];

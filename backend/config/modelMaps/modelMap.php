@@ -26,6 +26,7 @@ return [
                       'huiyuan' => 'userMember',
                       'huiyuanxinxi' => 'memberInfo',
                       'anlitijiao' => "caseSubmit",
+                      "shenpiyijian"=>'yijian'
 
     ]
 ];

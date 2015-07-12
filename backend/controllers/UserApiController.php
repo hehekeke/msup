@@ -10,6 +10,7 @@ use backend\models\MsupMemberInfo;
 use backend\models\MsupUserMember;
 use backend\models\MsupProducer;
 use backend\models\MsupSites;
+use backend\models\MsupCaseAdvice;
 use backend\models\MsupCaseSubmit;
 use backend\components\ApiAccest;
 
@@ -341,9 +342,11 @@ class UserApiController extends Controller
 	 */
 	public function actionTestAddCaseSubmitAdvice($value=''){
 		$request = [
-						'anlitijiao' => [
-		                    'mcs_caseAdvice'=>'这个案例写的太短33333',
-		                    'mcs_id'=>'3'
+						'shenpiyijian' => [
+		                    'myj_content'=>'这个案例写的太短',
+		                    'myj_case_id'=>'2',
+		                    'myj_user_id'=>'33',
+		                    'myj_advice_date'=>"111"
 						]
 						
 				   ];
@@ -351,12 +354,19 @@ class UserApiController extends Controller
 	}
 	public function actionAddCaseSubmitAdvice($request = null)
 	{
-
-		$model = new MsupCaseSubmit;
+         
+		$model = new MsupCaseAdvice;
 		$request = $this->api->request->unformatInputRequest($this->checkRequest($request));
 		
-		$model->id = $request['caseSubmit']['id'];
-     	$model->addCaseSubmitAdvice($request['caseSubmit']['caseAdvice']);
+		$row = $model->create($request[yijian]);
+		
+		$caseSubmitModel = new MsupCaseSubmit;	
+		p($row);
+		$this->api->errorHandler->pushDataByJson($row);
+
+		// p($row);
+		// $model->id = $request['caseSubmit']['id'];
+  //    	$model->addCaseSubmitAdvice($request['caseSubmit']['caseAdvice']);
 		// $this->saveCache($this->checkRequest($request), $row);
 	
 		// $this->saveCache($this->checkRequest($request), $row);
@@ -372,9 +382,12 @@ class UserApiController extends Controller
 public function actionTestGetCaseSubmitDetailById($value='')
 	{
 		$request = [
-               'mmi_userId'=>'61'		
+              'anlitijiao' => [
+		                   	 'mcs_id'=>'2',
+		                    'mcs_userid'=>'59'
+						]	
         ];
-	    $this->actionGetCaseSubmitDetailById($request[mmi_userId]);
+	   $this->actionGetCaseSubmitDetailById(json_encode($request));
 				  
 	}
 
@@ -385,9 +398,33 @@ public function actionTestGetCaseSubmitDetailById($value='')
 		$caseSubmitModel = new MsupCaseSubmit;
 		$infoModel = new MsupMemberInfo;
 		$caseSubmitTable = $caseSubmitModel::tableName();
-	  $sql = "SELECT cs.*,mi.name,mi.company,mi.position from ".$caseSubmitTable." cs ,".$infoModel::tableName().
-	                 " mi where cs.user_id = mi.userId and cs.user_id =".$request['caseSubmit']['user_id'].
+	  	$sql = "SELECT cs.*,mi.name,mi.company,mi.position mca_advice_date from ".$caseSubmitTable." cs ,".$infoModel::tableName().
+	                 " mi  where cs.user_id = mi.userId and cs.user_id =".$request['caseSubmit']['user_id'].
 	                    " and cs.id = ".$request['caseSubmit']['id']." order by id desc";
+		$row['caseSumbit'] = $caseSubmitModel->findBySql($sql)->asArray()->all();
+       
+		$sql_reviewInfo = "select mi.name ,mi.position,mca.content,mca.advice_date from ".$infoModel::tableName()." mi,msup_case_advice mca where mi.userId in (".
+		                    "select user_id from msup_case_advice  where   case_id = ".$request['caseSubmit']['id']." ) "
+  							." and mca.case_id = ".$request['caseSubmit']['id'];
+		$row['advice'] = $caseSubmitModel->findBySql($sql_reviewInfo)->asArray()->all();
+        
+		
+		$this->api->errorHandler->pushDataByJson($row);
+	}
+
+	public function actionGetCaseSubmitReviewDetailById($request = null)
+	{
+		$request = $this->api->request->unformatInputRequest($this->checkRequest($request));
+		// p($request);
+		$caseSubmitModel = new MsupCaseSubmit;
+		$infoModel = new MsupMemberInfo;
+		$caseSubmitTable = $caseSubmitModel::tableName();
+		$case_id = $request['caseSubmit']['id'];
+	  $sql = "SELECT cs.*,mi.name,mi.company,mi.position from ".$caseSubmitTable." cs ,".$infoModel::tableName().
+	                 " mi where cs.user_id = mi.userId and cs.user_id  in".
+	                 "  ( select user_id from msup_case_submit where msup_case_submit.id = ".$case_id.") ".
+					  
+	                   "order by id desc";
 	     
 		$row = $caseSubmitModel->findBySql($sql)->asArray()->all();
 		$this->api->errorHandler->pushDataByJson($row);
@@ -428,6 +465,40 @@ public function actionTestGetCaseSubmitDetailById($value='')
 		} else {
 			return false;
 		}
+	}
+
+	/**
+	 * 判断登录的用户 是否是出品人
+	 * @param  [type] $request [description]
+	 * @return [type]          [description]
+	 */
+	public function actionTestUserIsReivew($value=''){
+		$request = [
+						'anlitijiao' => [
+		                    'mcs_userid'=>'58'
+						]
+						
+				   ];
+		$this->actionUserIsReivew(json_encode($request));
+	}
+	public function actionUserIsReivew($request = null)
+		{
+		$request = $this->api->request->unformatInputRequest($this->checkRequest($request));
+		$caseSubmitModel = new MsupCaseSubmit;
+		$caseSubmitTable = $caseSubmitModel::tableName();
+		
+	  	 $sql = "select user_id from msup_producer where user_id = ".$request['caseSubmit']['user_id'];
+	     
+		$row = $caseSubmitModel->findBySql($sql)->asArray()->all();
+		if(empty($row)){
+			$row = '0'; 
+		}else{
+			$row = '1'; 
+		}
+
+		$this->api->errorHandler->pushDataByJson($row);
+
+		
 	}
 
 }
